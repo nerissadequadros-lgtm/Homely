@@ -1,0 +1,15 @@
+.tools/
+.ssh-known-hosts
+**/node_modules/
+**/build/
+**/.gradle/
+android/local.properties
+server/.env
+server/storage/
+server/dist/
+*.keystore
+*.jks
+*.log
+artifacts/
+.idea/
+deploy-bundle.tar.gz

@@ -1,0 +1,35 @@
+{
+  "name": "homely-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "migrate": "tsx src/migrate.ts",
+    "seed": "tsx src/seed.ts",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@fastify/multipart": "^9.0.3",
+    "@fastify/rate-limit": "^10.3.0",
+    "archiver": "^7.0.1",
+    "dotenv": "^16.5.0",
+    "fastify": "^5.3.3",
+    "file-type": "22.1.1",
+    "pg": "^8.16.0",
+    "zod": "^3.25.49"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.3",
+    "@types/node": "^22.15.29",
+    "@types/pg": "^8.15.2",
+    "sharp": "^0.34.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,24 @@
+[Unit]
+Description=Homely API
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=homely
+Group=homely
+WorkingDirectory=/opt/homely/server
+EnvironmentFile=/etc/homely/api.env
+ExecStart=/usr/bin/node /opt/homely/server/dist/index.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/homely
+MemoryMax=512M
+TasksMax=100
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target

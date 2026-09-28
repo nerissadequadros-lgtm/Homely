@@ -1,0 +1,4 @@
+GeoNames cities15000 dataset downloaded 2026-09-22 from https://download.geonames.org/export/dump/cities15000.zip.
+Copyright GeoNames contributors. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Transformed into JSON, names normalized for local search, sorted by population. Coordinates retained at source precision. No end-user queries are sent to GeoNames.
+Weather forecast data: MET Norway, https://api.met.no/ (CC BY 4.0), translated and condensed by Homely.

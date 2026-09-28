@@ -1,0 +1,5 @@
+[Unit]
+Description=Homely local backup
+[Service]
+Type=oneshot
+ExecStart=/opt/homely/backup.sh

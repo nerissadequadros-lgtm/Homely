@@ -1,0 +1,5 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="12dp" android:background="@drawable/widget_dark">
+<TextClock android:id="@+id/widget_weekday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format12Hour="EEEE" android:format24Hour="EEEE" android:textSize="12sp" android:textColor="#AEA2FF"/>
+<TextClock android:id="@+id/widget_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format12Hour="dd" android:format24Hour="dd" android:textSize="44sp" android:textColor="#FFFFFF" android:fontFamily="sans-serif-medium"/>
+<TextClock android:id="@+id/widget_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format12Hour="MMMM" android:format24Hour="MMMM" android:textSize="12sp" android:textColor="#AEA2FF"/>
+</LinearLayout>

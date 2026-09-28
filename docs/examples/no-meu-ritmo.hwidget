@@ -1,0 +1,12 @@
+{
+  "id": "be5e3d5c-cb55-4d49-8823-e28f110863e6",
+  "name": "No meu ritmo",
+  "kind": "text",
+  "text": "Hoje, no meu ritmo.",
+  "foreground": "#F7F1FF",
+  "background": "#211A34",
+  "accent": "#BBA5FF",
+  "radius": 28,
+  "height": 144,
+  "fontSize": 26
+}

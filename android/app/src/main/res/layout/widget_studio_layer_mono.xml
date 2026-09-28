@@ -1,0 +1,9 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/layer_root" android:layout_width="match_parent" android:layout_height="match_parent">
+<FrameLayout android:id="@+id/layer_content" android:layout_width="match_parent" android:layout_height="match_parent">
+<ImageView android:id="@+id/layer_element_background" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:contentDescription="@null" />
+<AnalogClock android:id="@+id/layer_analog" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" />
+<Chronometer android:id="@+id/layer_countdown" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:visibility="gone" />
+<TextClock android:id="@+id/layer_clock" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:fontFamily="monospace" android:format12Hour="HH:mm" android:format24Hour="HH:mm" />
+<TextView android:id="@+id/layer_text" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:fontFamily="monospace" android:maxLines="4" />
+<ImageView android:id="@+id/layer_image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:contentDescription="@null" />
+</FrameLayout></FrameLayout>

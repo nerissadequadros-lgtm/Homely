@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.Homely" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">#090C12</item>
+        <item name="android:colorAccent">#7965FF</item>
+    </style>
+    <color name="launcher_background">#100D26</color>
+    <string name="wallpaper_description">Seu wallpaper animado, criado no Homely.</string>
+</resources>

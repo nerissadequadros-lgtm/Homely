@@ -1,0 +1,5 @@
+[Unit]
+Description=Homely TLS certificate renewal
+[Service]
+Type=oneshot
+ExecStart=/opt/homely/renew-certificate.sh

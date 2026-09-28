@@ -1,0 +1,291 @@
+[
+  {
+    "file": "midnight.png",
+    "title": "Midnight",
+    "category": "Natureza",
+    "accent": "#788FD6",
+    "icons": true,
+    "tags": [
+      "natureza",
+      "midnight",
+      "original"
+    ],
+    "description": "Coleção original Homely. Paisagens para desacelerar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 0,
+    "screenshots": [
+      "midnight-preview-lock.webp",
+      "midnight-preview-home.webp"
+    ]
+  },
+  {
+    "file": "aurora.png",
+    "title": "Aurora",
+    "category": "Natureza",
+    "accent": "#8FBDE5",
+    "icons": true,
+    "tags": [
+      "natureza",
+      "aurora",
+      "original"
+    ],
+    "description": "Coleção original Homely. Paisagens para desacelerar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "video": "aurora-motion.mp4",
+    "refinedStyle": 1,
+    "screenshots": [
+      "aurora-preview-lock.webp",
+      "aurora-preview-home.webp"
+    ]
+  },
+  {
+    "file": "silk.png",
+    "title": "Violet silk",
+    "category": "Abstrato",
+    "accent": "#A28BFF",
+    "icons": true,
+    "tags": [
+      "abstrato",
+      "silk",
+      "original"
+    ],
+    "description": "Coleção original Homely. Cor, forma e um novo olhar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 2,
+    "screenshots": [
+      "silk-preview-lock.webp",
+      "silk-preview-home.webp"
+    ]
+  },
+  {
+    "file": "moss.png",
+    "title": "Moss",
+    "category": "Natureza",
+    "accent": "#83B08D",
+    "icons": false,
+    "tags": [
+      "natureza",
+      "moss",
+      "original"
+    ],
+    "description": "Coleção original Homely. Paisagens para desacelerar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 0,
+    "screenshots": [
+      "moss-preview-lock.webp",
+      "moss-preview-home.webp"
+    ]
+  },
+  {
+    "file": "dune.png",
+    "title": "Dune",
+    "category": "Minimal",
+    "accent": "#E1B990",
+    "icons": true,
+    "tags": [
+      "minimal",
+      "dune",
+      "original"
+    ],
+    "description": "Coleção original Homely. Menos ruído. Mais você. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 1,
+    "screenshots": [
+      "dune-preview-lock.webp",
+      "dune-preview-home.webp"
+    ]
+  },
+  {
+    "file": "cosmic.png",
+    "title": "Cosmic",
+    "category": "Espaço",
+    "accent": "#A99AFF",
+    "icons": true,
+    "tags": [
+      "espaço",
+      "cosmic",
+      "original"
+    ],
+    "description": "Coleção original Homely. Um universo na sua tela. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 2,
+    "screenshots": [
+      "cosmic-preview-lock.webp",
+      "cosmic-preview-home.webp"
+    ]
+  },
+  {
+    "file": "bloom.png",
+    "title": "Bloom",
+    "category": "Abstrato",
+    "accent": "#F4AEBE",
+    "icons": false,
+    "tags": [
+      "abstrato",
+      "bloom",
+      "original"
+    ],
+    "description": "Coleção original Homely. Cor, forma e um novo olhar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 0,
+    "screenshots": [
+      "bloom-preview-lock.webp",
+      "bloom-preview-home.webp"
+    ]
+  },
+  {
+    "file": "tide.png",
+    "title": "Tide",
+    "category": "Natureza",
+    "accent": "#6BD4D5",
+    "icons": false,
+    "tags": [
+      "natureza",
+      "tide",
+      "original"
+    ],
+    "description": "Coleção original Homely. Paisagens para desacelerar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 1,
+    "screenshots": [
+      "tide-preview-lock.webp",
+      "tide-preview-home.webp"
+    ]
+  },
+  {
+    "file": "alpine.png",
+    "title": "Alpine",
+    "category": "Natureza",
+    "accent": "#A6BFCE",
+    "icons": false,
+    "tags": [
+      "natureza",
+      "alpine",
+      "original"
+    ],
+    "description": "Coleção original Homely. Paisagens para desacelerar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 2,
+    "screenshots": [
+      "alpine-preview-lock.webp",
+      "alpine-preview-home.webp"
+    ]
+  },
+  {
+    "file": "noir.png",
+    "title": "Noir",
+    "category": "Minimal",
+    "accent": "#B4BBCA",
+    "icons": true,
+    "tags": [
+      "minimal",
+      "noir",
+      "original"
+    ],
+    "description": "Coleção original Homely. Menos ruído. Mais você. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 0,
+    "screenshots": [
+      "noir-preview-lock.webp",
+      "noir-preview-home.webp"
+    ]
+  },
+  {
+    "file": "ember.png",
+    "title": "Ember",
+    "category": "Abstrato",
+    "accent": "#F59576",
+    "icons": false,
+    "tags": [
+      "abstrato",
+      "ember",
+      "original"
+    ],
+    "description": "Coleção original Homely. Cor, forma e um novo olhar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 1,
+    "screenshots": [
+      "ember-preview-lock.webp",
+      "ember-preview-home.webp"
+    ]
+  },
+  {
+    "file": "moonrise.png",
+    "title": "Moonrise",
+    "category": "Espaço",
+    "accent": "#D4C4B5",
+    "icons": false,
+    "tags": [
+      "espaço",
+      "moonrise",
+      "original"
+    ],
+    "description": "Coleção original Homely. Um universo na sua tela. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 2,
+    "screenshots": [
+      "moonrise-preview-lock.webp",
+      "moonrise-preview-home.webp"
+    ]
+  },
+  {
+    "file": "forest.png",
+    "title": "Forest whispers",
+    "category": "Natureza",
+    "accent": "#99BFB1",
+    "icons": false,
+    "tags": [
+      "natureza",
+      "forest",
+      "original"
+    ],
+    "description": "Coleção original Homely. Paisagens para desacelerar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 0,
+    "screenshots": [
+      "forest-preview-lock.webp",
+      "forest-preview-home.webp"
+    ]
+  },
+  {
+    "file": "neon.png",
+    "title": "After hours",
+    "category": "Tecnologia",
+    "accent": "#BD96F8",
+    "icons": true,
+    "tags": [
+      "tecnologia",
+      "neon",
+      "original"
+    ],
+    "description": "Coleção original Homely. Luzes que contam outra história. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 1,
+    "screenshots": [
+      "neon-preview-lock.webp",
+      "neon-preview-home.webp"
+    ]
+  },
+  {
+    "file": "peach.png",
+    "title": "Peach hour",
+    "category": "Minimal",
+    "accent": "#F8B29A",
+    "icons": false,
+    "tags": [
+      "minimal",
+      "peach",
+      "original"
+    ],
+    "description": "Coleção original Homely. Menos ruído. Mais você. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 2,
+    "screenshots": [
+      "peach-preview-lock.webp",
+      "peach-preview-home.webp"
+    ]
+  },
+  {
+    "file": "glacier.png",
+    "title": "Glacier",
+    "category": "Natureza",
+    "accent": "#92CBE5",
+    "icons": false,
+    "tags": [
+      "natureza",
+      "glacier",
+      "original"
+    ],
+    "description": "Coleção original Homely. Paisagens para desacelerar. Arte procedural original, disponível em CC0 para você personalizar e compartilhar.",
+    "refinedStyle": 0,
+    "screenshots": [
+      "glacier-preview-lock.webp",
+      "glacier-preview-home.webp"
+    ]
+  }
+]

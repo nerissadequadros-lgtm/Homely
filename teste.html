@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cleison Alves - Creative Portfolio</title>
+    <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap");
+
+      :root {
+        --bg: #f4f4f0;
+        --dark: #0f0f0f;
+        --light-gray: #e5e5e5;
+        --accent: #ff4500;
+      }
+
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        background-color: var(--bg);
+        color: var(--dark);
+        overflow-x: hidden;
+        margin: 0;
+      }
+
+      .font-syne {
+        font-family: "Syne", sans-serif;
+      }
+
+      /* Neo-brutalist components */
+      .brutal-border {
+        border: 3px solid var(--dark);
+      }
+
+      .brutal-box {
+        background: #fff;
+        border: 3px solid var(--dark);
+        box-shadow: 8px 8px 0px var(--dark);
+        border-radius: 20px;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        overflow: hidden;
+      }
+      .brutal-box:hover {
+        transform: translate(4px, 4px);
+        box-shadow: 4px 4px 0px var(--dark);
+      }
+
+      .brutal-btn {
+        background: #fff;
+        border: 3px solid var(--dark);
+        box-shadow: 4px 4px 0px var(--dark);
+        border-radius: 999px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 0.2s;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--dark);
+      }
+      .brutal-btn:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px var(--dark);
+      }
+      .brutal-btn:active {
+        transform: translate(4px, 4px);
+        box-shadow: 0px 0px 0px var(--dark);
+      }
+
+      .brutal-tag {
+        border: 2px solid var(--dark);
+        background: #fff;
+        border-radius: 12px;
+        padding: 6px 14px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        box-shadow: 3px 3px 0px var(--dark);
+        display: inline-block;
+        color: var(--dark);
+      }
+
+      /* Colors */
+      .bg-light-gray {
+        background-color: var(--light-gray);
+      }
+      .bg-dark {
+        background-color: var(--dark);
+        color: #fff;
+      }
+      .text-accent {
+        color: var(--accent);
+      }
+
+      /* Marquee */
+      .marquee-wrapper {
+        border-top: 3px solid var(--dark);
+        border-bottom: 3px solid var(--dark);
+        background-color: var(--dark);
+        color: #fff;
+        overflow: hidden;
+        display: flex;
+        white-space: nowrap;
+        padding: 16px 0;
+        position: relative;
+      }
+      .marquee-content {
+        display: flex;
+        animation: marquee 20s linear infinite;
+      }
+      .marquee-text {
+        font-family: "Syne", sans-serif;
+        font-weight: 800;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        padding: 0 20px;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Timeline */
+      .timeline-dot {
+        width: 18px;
+        height: 18px;
+        background: var(--dark);
+        border: 3px solid var(--dark);
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: 6px;
+        z-index: 2;
+      }
+      .timeline-line {
+        position: absolute;
+        left: -2px;
+        top: 12px;
+        bottom: -40px;
+        width: 3px;
+        background: var(--dark);
+        z-index: 1;
+      }
+
+      /* Language Switcher Logic */
+      [data-lang="en"],
+      [data-lang-block="en"] {
+        display: none;
+      }
+      .lang-en [data-lang="pt"],
+      .lang-en [data-lang-block="pt"] {
+        display: none;
+      }
+      .lang-en [data-lang="en"] {
+        display: inline;
+      }
+      .lang-en [data-lang-block="en"] {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="lang-pt">
+    <!-- Header -->
+    <header
+      class="px-6 lg:px-12 py-5 flex justify-between items-center border-b-4 border-[#0f0f0f] bg-white sticky top-0 z-50"
+    >
+      <div class="font-syne font-extrabold text-3xl tracking-tighter">CJA.</div>
+      <div
+        class="flex gap-3 items-center bg-[#F4F4F0] p-1.5 brutal-border rounded-full"
+      >
+        <button
+          onclick="setLang('pt')"
+          id="btn-pt"
+          class="brutal-btn bg-dark text-white px-4 py-1.5 text-xs"
+        >
+          PT
+        </button>
+        <button
+          onclick="setLang('en')"
+          id="btn-en"
+          class="brutal-btn bg-white px-4 py-1.5 text-xs border-transparent shadow-none hover:shadow-none hover:translate-x-0 hover:translate-y-0 text-dark"
+        >
+          EN
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="px-6 lg:px-12 py-16 lg:py-24 max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-center justify-between relative gap-16 lg:gap-12"
+    >
+      <!-- Text Content -->
+      <div class="flex-1 flex flex-col items-start">
+        <div
+          class="brutal-tag bg-dark text-white mb-8 transform -rotate-3 text-sm px-6 py-2"
+        >
+          <span data-lang="pt">🚀 DISPONÍVEL PARA CONTRATAÇÃO</span>
+          <span data-lang="en">🚀 AVAILABLE FOR HIRE</span>
+        </div>
+
+        <h1
+          class="font-syne font-extrabold text-6xl md:text-8xl lg:text-[8.5rem] leading-[0.9] tracking-tight uppercase mb-8"
+        >
+          Cleison <br />
+          Alves
+        </h1>
+
+        <p class="text-xl lg:text-3xl font-medium max-w-3xl mb-12 leading-snug">
+          <span data-lang="pt"
+            >Eu escalo negócios unindo
+            <span
+              class="bg-light-gray px-3 py-1 brutal-border rounded-xl font-bold"
+              >Mídia Paga</span
+            >
+            e
+            <span
+              class="bg-light-gray px-3 py-1 brutal-border rounded-xl font-bold"
+              >Engenharia de Software</span
+            >.</span
+          >
+          <span data-lang="en"
+            >I scale businesses by uniting
+            <span
+              class="bg-light-gray px-3 py-1 brutal-border rounded-xl font-bold"
+              >Paid Media</span
+            >
+            and
+            <span
+              class="bg-light-gray px-3 py-1 brutal-border rounded-xl font-bold"
+              >Software Eng</span
+            >.</span
+          >
+        </p>
+
+        <div class="flex flex-wrap gap-5">
+          <a
+            href="https://linkedin.com/in/cleisonalves"
+            target="_blank"
+            class="brutal-btn bg-white px-8 py-4 text-lg"
+          >
+            LINKEDIN
+            <span class="ml-3 font-syne font-bold text-2xl leading-none"
+              >↗</span
+            >
+          </a>
+          <a
+            href="mailto:cleisonalves4@gmail.com"
+            class="brutal-btn bg-dark text-white px-8 py-4 text-lg hover:bg-[#FF4500] hover:text-white hover:border-[#FF4500]"
+          >
+            <span data-lang="pt">FALE COMIGO</span
+            ><span data-lang="en">CONTACT ME</span>
+            <span class="ml-3 font-syne font-bold text-2xl leading-none"
+              >✉</span
+            >
+          </a>
+        </div>
+      </div>
+
+      <!-- Rotating Profile Image -->
+      <div class="flex-shrink-0 relative">
+        <img
+          src="./profile.png"
+          id="rotating-profile"
+          alt="Cleison Alves"
+          class="w-72 h-72 lg:w-96 lg:h-96 rounded-full brutal-border object-cover shadow-[8px_8px_0px_#0f0f0f]"
+          style="will-change: transform"
+        />
+
+        <!-- Fun badge -->
+        <div
+          class="absolute bottom-4 right-0 lg:-right-6 brutal-tag bg-white px-5 py-2 transform rotate-12 text-lg lg:text-xl"
+        >
+          <span data-lang="pt">🎯</span><span data-lang="en">🎯</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scrolling Marquee -->
+    <div class="marquee-wrapper">
+      <div class="marquee-content">
+        <div class="marquee-text">
+          ✦ DATA-DRIVEN ✦ PAID TRAFFIC ✦ SOFTWARE ENGINEERING ✦ HIGH BUDGET ✦
+          CRM EXPERT
+        </div>
+        <div class="marquee-text">
+          ✦ DATA-DRIVEN ✦ PAID TRAFFIC ✦ SOFTWARE ENGINEERING ✦ HIGH BUDGET ✦
+          CRM EXPERT
+        </div>
+        <div class="marquee-text">
+          ✦ DATA-DRIVEN ✦ PAID TRAFFIC ✦ SOFTWARE ENGINEERING ✦ HIGH BUDGET ✦
+          CRM EXPERT
+        </div>
+      </div>
+    </div>
+
+    <!-- Bento Grid Content -->
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 px-6 lg:px-12 py-12 lg:py-20 max-w-7xl mx-auto"
+    >
+      <!-- About Me -->
+      <div
+        class="lg:col-span-8 brutal-box bg-white p-8 lg:p-12 flex flex-col justify-center"
+      >
+        <h2 class="font-syne font-extrabold text-4xl lg:text-5xl mb-6">
+          <span data-lang="pt">Visão Geral</span
+          ><span data-lang="en">Overview</span>
+        </h2>
+        <p class="text-lg lg:text-2xl font-medium leading-relaxed">
+          <span data-lang="pt"
+            >Profissional com vasta experiência cruzando as fronteiras de
+            Marketing Digital, Performance e Tecnologia. Minha missão é
+            orquestrar altos orçamentos multiplataforma aplicando integrações
+            avançadas de API, setups rigorosos de GTM e automações que
+            transformam leads em receita mensurável.</span
+          >
+          <span data-lang="en"
+            >Results-oriented professional crossing the borders of Digital
+            Marketing, Performance, and Technology. My mission is to orchestrate
+            high multi-platform budgets applying advanced API integrations,
+            rigorous GTM setups, and automations that transform leads into
+            measurable revenue.</span
+          >
+        </p>
+      </div>
+
+      <!-- Key Strengths -->
+      <div
+        class="lg:col-span-4 brutal-box bg-light-gray p-8 lg:p-10 flex flex-col justify-center"
+      >
+        <h3 class="font-syne font-extrabold text-3xl mb-8">
+          <span data-lang="pt">Diferenciais</span
+          ><span data-lang="en">Strengths</span>
+        </h3>
+        <ul class="space-y-6 font-bold text-lg lg:text-xl">
+          <li class="flex items-center gap-4">
+            <span class="text-3xl">⚡</span>
+            <span data-lang="pt">Híbrido Mídia + Tech</span
+            ><span data-lang="en">Media + Tech Hybrid</span>
+          </li>
+          <li class="flex items-center gap-4">
+            <span class="text-3xl">💰</span>
+            <span data-lang="pt">Altos Orçamentos</span
+            ><span data-lang="en">High-Budget Mastery</span>
+          </li>
+          <li class="flex items-center gap-4">
+            <span class="text-3xl">🔄</span>
+            <span data-lang="pt">Funil End-to-End</span
+            ><span data-lang="en">End-to-End Funnel</span>
+          </li>
+          <li class="flex items-center gap-4">
+            <span class="text-3xl">🚗</span>
+            <span data-lang="pt">Domínio Automotivo</span
+            ><span data-lang="en">Automotive Expertise</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Skills & Education -->
+      <div class="lg:col-span-4 brutal-box bg-white p-8 lg:p-10">
+        <h3 class="font-syne font-extrabold text-3xl mb-8">Skills</h3>
+        <div class="flex flex-wrap gap-3 mb-12">
+          <span class="brutal-tag">Google Ads</span>
+          <span class="brutal-tag">Meta Ads</span>
+          <span class="brutal-tag">TikTok Ads</span>
+          <span class="brutal-tag">LinkedIn Ads</span>
+          <span class="brutal-tag">GTM</span>
+          <span class="brutal-tag">Looker Studio</span>
+          <span class="brutal-tag">MySQL</span>
+          <span class="brutal-tag">Syonet CRM</span>
+          <span class="brutal-tag">SEO</span>
+        </div>
+
+        <h3 class="font-syne font-extrabold text-2xl mb-6">
+          <span data-lang="pt">Educação</span
+          ><span data-lang="en">Education</span>
+        </h3>
+        <div class="bg-light-gray brutal-border p-5 rounded-2xl">
+          <p class="font-extrabold text-lg leading-tight mb-1">
+            <span data-lang="pt">Engenharia de Software</span
+            ><span data-lang="en">Software Engineering</span>
+          </p>
+          <p class="text-sm font-semibold text-gray-700 mb-4">
+            UniCesumar (2024)
+          </p>
+          <hr class="border-t-2 border-dashed border-gray-400 mb-4" />
+          <p class="font-extrabold text-lg leading-tight mb-1">
+            <span data-lang="pt">Técnico em Adm</span
+            ><span data-lang="en">Business Admin</span>
+          </p>
+          <p class="text-sm font-semibold text-gray-700">
+            Colégio E. Dr. S. Paraná
+          </p>
+        </div>
+      </div>
+
+      <!-- Experience Timeline -->
+      <div class="lg:col-span-8 brutal-box bg-white p-8 lg:p-12">
+        <h2 class="font-syne font-extrabold text-4xl lg:text-5xl mb-12">
+          <span data-lang="pt">Experiência</span
+          ><span data-lang="en">Experience</span>
+        </h2>
+
+        <div class="relative pl-6">
+          <!-- Fancar -->
+          <div class="relative pl-8 mb-16">
+            <div class="timeline-line"></div>
+            <div class="timeline-dot"></div>
+
+            <div
+              class="flex flex-col md:flex-row justify-between md:items-end mb-4"
+            >
+              <h3 class="font-syne font-extrabold text-3xl">Grupo Fancar</h3>
+              <span
+                class="font-bold text-dark bg-light-gray brutal-border px-3 py-1 rounded-xl text-sm mt-3 md:mt-0"
+                >2023 – 2026</span
+              >
+            </div>
+            <p class="font-bold text-xl mb-4 text-dark">
+              <span data-lang="pt">Analista de Mídia Paga Pleno</span
+              ><span data-lang="en">Mid-Senior Paid Media Analyst</span>
+            </p>
+            <p class="mb-6 font-medium text-lg leading-relaxed">
+              <span data-lang-block="pt"
+                >Gestão end-to-end de campanhas e estratégias multiplataforma
+                (Google, Meta, TikTok, LinkedIn). Foco automotivo, integração
+                via API com Syonet CRM e dashboards no Looker Studio.</span
+              >
+              <span data-lang-block="en"
+                >End-to-end management of paid media campaigns and
+                cross-platform strategies (Google, Meta, TikTok, LinkedIn).
+                Automotive focus, API integrations with Syonet CRM, and Looker
+                Studio dashboards.</span
+              >
+            </p>
+            <div
+              class="bg-light-gray brutal-border p-6 rounded-2xl shadow-[4px_4px_0px_#000]"
+            >
+              <p class="font-extrabold text-lg mb-4">
+                🚀 <span data-lang="pt">Impacto Comprovado</span
+                ><span data-lang="en">Proven Impact</span>
+              </p>
+              <ul class="list-none font-medium space-y-3 text-lg">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 font-bold">✦</span>
+                  <span data-lang-block="pt"
+                    >Escala de receita gerada via mídia de ~R$ 900K para
+                    <strong>R$ 8 Milhões/mês</strong>.</span
+                  >
+                  <span data-lang-block="en"
+                    >Scaled media-attributed revenue from ~R$ 900K to
+                    <strong>R$ 8 Million/month</strong>.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 font-bold">✦</span>
+                  <span data-lang-block="pt"
+                    >Gestão de orçamentos de ~R$ 40K para
+                    <strong>R$ 94K/mês</strong>.</span
+                  >
+                  <span data-lang-block="en"
+                    >Managed budget scaling from ~R$ 40K to
+                    <strong>R$ 94K/month</strong>.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 font-bold">✦</span>
+                  <span data-lang-block="pt"
+                    >Otimizações que geraram economia recorrente de
+                    <strong>R$ 10K/mês</strong>.</span
+                  >
+                  <span data-lang-block="en"
+                    >Optimizations generating recurring savings of
+                    <strong>R$ 10K/month</strong>.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bons de Briga -->
+          <div class="relative pl-8 mb-16">
+            <div class="timeline-line" style="bottom: -20px"></div>
+            <div class="timeline-dot"></div>
+
+            <div
+              class="flex flex-col md:flex-row justify-between md:items-end mb-4"
+            >
+              <h3 class="font-syne font-extrabold text-3xl">Bons de Briga</h3>
+              <span
+                class="font-bold bg-light-gray brutal-border px-3 py-1 rounded-xl text-sm mt-3 md:mt-0"
+                >2021 – 2023</span
+              >
+            </div>
+            <p class="font-bold text-xl mb-4 text-dark">
+              <span data-lang="pt">Analista de Performance</span
+              ><span data-lang="en">Performance Analyst</span>
+            </p>
+            <p class="font-medium text-lg leading-relaxed">
+              <span data-lang-block="pt"
+                >Desenvolvimento de sites responsivos, landing pages, SEO
+                técnico, implementação de scripts de rastreamento (GTM) e gestão
+                de campanhas multi-cliente.</span
+              >
+              <span data-lang-block="en"
+                >Development of responsive websites, landing pages, technical
+                SEO, tracking scripts implementation (GTM), and multi-client
+                campaign management.</span
+              >
+            </p>
+          </div>
+
+          <!-- SMICT -->
+          <div class="relative pl-8">
+            <div class="timeline-dot bg-light-gray border-light-gray"></div>
+            <div
+              class="flex flex-col md:flex-row justify-between md:items-end mb-2"
+            >
+              <h3 class="font-syne font-extrabold text-2xl text-gray-500">
+                SMICT
+              </h3>
+              <span
+                class="font-bold bg-light-gray brutal-border px-3 py-1 rounded-xl text-sm mt-3 md:mt-0 text-gray-500"
+                >2019 – 2020</span
+              >
+            </div>
+            <p class="font-bold text-lg text-gray-500">
+              <span data-lang="pt">Estágio Administrativo/MKT</span
+              ><span data-lang="en">Admin/MKT Intern</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications Full Width -->
+      <div
+        class="lg:col-span-12 brutal-box bg-dark text-white p-8 lg:p-12 mb-8"
+      >
+        <h3
+          class="font-syne font-extrabold text-3xl lg:text-4xl mb-8 text-white"
+        >
+          <span data-lang="pt">Certificações Selecionadas</span
+          ><span data-lang="en">Selected Certifications</span>
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span
+            class="brutal-tag text-dark hover:-translate-y-1 transition cursor-default"
+            >Google Ads (Search, Display, Video, Apps, Shopping)</span
+          >
+          <span
+            class="brutal-tag text-dark hover:-translate-y-1 transition cursor-default"
+            >Google Ads Measurement</span
+          >
+          <span
+            class="brutal-tag text-dark hover:-translate-y-1 transition cursor-default"
+            >AI-Powered High-Performance Ads</span
+          >
+          <span
+            class="brutal-tag text-dark hover:-translate-y-1 transition cursor-default"
+            >MySQL Database</span
+          >
+          <span
+            class="brutal-tag text-dark hover:-translate-y-1 transition cursor-default"
+            >Cybersecurity CIS Controls</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="border-t-4 border-dark bg-white py-12 text-center font-bold text-lg"
+    >
+      <p>
+        <span data-lang="pt">PROJETADO POR CLEISON ALVES © 2026</span>
+        <span data-lang="en">DESIGNED BY CLEISON ALVES © 2026</span>
+      </p>
+    </footer>
+
+    <script>
+      function setLang(lang) {
+        document.body.className =
+          document.body.className.replace(/lang-\w+/, "") + " lang-" + lang;
+        document.documentElement.lang = lang === "pt" ? "pt-BR" : "en-US";
+
+        const btnPt = document.getElementById("btn-pt");
+        const btnEn = document.getElementById("btn-en");
+
+        if (lang === "pt") {
+          btnPt.classList.add(
+            "bg-dark",
+            "text-white",
+            "border-dark",
+            "shadow-[2px_2px_0px_#0f0f0f]",
+          );
+          btnPt.classList.remove(
+            "bg-white",
+            "text-dark",
+            "border-transparent",
+            "shadow-none",
+          );
+
+          btnEn.classList.add(
+            "bg-white",
+            "text-dark",
+            "border-transparent",
+            "shadow-none",
+          );
+          btnEn.classList.remove(
+            "bg-dark",
+            "text-white",
+            "border-dark",
+            "shadow-[2px_2px_0px_#0f0f0f]",
+          );
+        } else {
+          btnEn.classList.add(
+            "bg-dark",
+            "text-white",
+            "border-dark",
+            "shadow-[2px_2px_0px_#0f0f0f]",
+          );
+          btnEn.classList.remove(
+            "bg-white",
+            "text-dark",
+            "border-transparent",
+            "shadow-none",
+          );
+
+          btnPt.classList.add(
+            "bg-white",
+            "text-dark",
+            "border-transparent",
+            "shadow-none",
+          );
+          btnPt.classList.remove(
+            "bg-dark",
+            "text-white",
+            "border-dark",
+            "shadow-[2px_2px_0px_#0f0f0f]",
+          );
+        }
+      }
+
+      // Scroll rotation effect
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const rotatingImg = document.getElementById("rotating-profile");
+        if (rotatingImg) {
+          // Rotates the image based on scroll position
+          rotatingImg.style.transform = `rotate(${scrollY / 3}deg)`;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+[Unit]
+Description=Check Homely TLS certificate every week
+[Timer]
+OnCalendar=weekly
+Persistent=true
+[Install]
+WantedBy=timers.target
